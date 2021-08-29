@@ -1,0 +1,15 @@
+<HTML><HEAD><TITLE>Tiny earth</TITLE>
+<HTA:application id="frmMain" applicationname="frmMain" singleinstance="yes" showintaskbar="yes"
+maximizeButton="no" minimizeButton="no" border="thin" navigable="yes" windowState="normal"
+contextmenu="no"/></HEAD><SCRIPT language="VBScript">Option Explicit:Dim MainLoopInt
+Sub Window_OnLoad:Self.ResizeTo 400,400:Self.MoveTo (Screen.Width/2)-256,(Screen.Height/2)-256
+MainLoopInt = Window.SetInterval ("MainLoop", 1)
+Map.style.filter ="progid:DXImageTransform.Microsoft.glow(color=#000070, strength=7)"
+End Sub
+Sub MainLoop():map.style.pixelleft=map.style.pixelleft-1
+if map.style.pixelleft =-518 then map.style.pixelleft =0
+End Sub	
+</SCRIPT><BODY scroll="no" style="margin:0;background.color:#5050FF;">
+<div id="Map" style="position:absolute;font-family:webdings;font-size:400;color:#905020" />ûû</div>
+<div id="Ball" style="position:absolute;font-family:wingdings;font-size:900;Left:-200;Top:-296;" />£</div>
+</BODY></HTML>
